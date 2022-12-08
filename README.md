@@ -10,3 +10,5 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 - Debugging
 - Input function
 - Band Name Generator project
+
+## Day 2
