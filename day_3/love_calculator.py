@@ -20,9 +20,9 @@ for i in name2.lower():
 name2_score = str(score2)
 percent = name1_score + name2_score
 
-if int(percent) < 10 or int(percent) > 90:
+if (int(percent) < 10) or (int(percent) > 90):
     print(f"You score is {percent}, you go together like coke and mentos")
-elif int(percent) >= 40 or int(percent) <= 50:
+elif (int(percent) >= 40) and (int(percent) <= 50):
     print(f"Your score is {percent}, you're alright together.")
 else:
     print(f"Your love score is %{percent}")
