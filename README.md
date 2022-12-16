@@ -11,4 +11,12 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 - Input function
 - Band Name Generator project
 
-## Day 2
+## [Day 2](https://github.com/triplee12/100daysofcode/tree/main/day_2)
+
+- Data types
+- String formatting
+
+## [Day 3](https://github.com/triplee12/100daysofcode/tree/main/day_3)
+
+- Control flow
+- Logical operators
