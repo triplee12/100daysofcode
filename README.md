@@ -20,3 +20,8 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 
 - Control flow
 - Logical operators
+
+## [Day 4](https://github.com/triplee12/100daysofcode/tree/main/day_4)
+
+- Randomisation
+- List
