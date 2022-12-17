@@ -29,3 +29,9 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 ## [Day 5](https://github.com/triplee12/100daysofcode/tree/main/day_5)
 
 - For loop
+
+## [Day 6](https://github.com/triplee12/100daysofcode/tree/main/day_6)
+
+- Function
+- Indentation
+- While loop
