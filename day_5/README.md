@@ -9,3 +9,7 @@
 
 - Adding evens
 - FizzBuzz game
+
+## Final Project
+
+- Password generator
