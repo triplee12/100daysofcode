@@ -8,3 +8,4 @@
 ## For Loop With range() Function
 
 - Adding evens
+- FizzBuzz game
