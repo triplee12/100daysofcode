@@ -4,3 +4,7 @@
 
 - Average height
 - Highest score
+
+## For Loop With range() Function
+
+- Adding evens
