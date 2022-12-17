@@ -3,3 +3,4 @@
 ## For Loop
 
 - Average height
+- Highest score
