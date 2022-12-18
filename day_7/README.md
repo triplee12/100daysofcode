@@ -11,3 +11,7 @@
 ## Challenge 3
 
 - Checking if the player has won
+
+## Challenge 4
+
+- Keeping track of the player's lives
