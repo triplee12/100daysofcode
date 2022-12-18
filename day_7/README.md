@@ -1,0 +1,5 @@
+# Day 7 Of 100 Days Of Code With Python
+
+## Challenge 1
+
+- Picking a random words
