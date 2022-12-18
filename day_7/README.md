@@ -7,3 +7,7 @@
 ## Challenge 2
 
 - Replacing blanks with guesses
+
+## Challenge 3
+
+- Checking if the player has won
