@@ -15,3 +15,7 @@
 ## Challenge 4
 
 - Keeping track of the player's lives
+
+## Challenge 5
+
+- Improving the user experience
