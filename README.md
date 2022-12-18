@@ -35,3 +35,7 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 - Function
 - Indentation
 - While loop
+
+## [Day 7](https://github.com/triplee12/100daysofcode/tree/main/day_7)
+
+- Hangman challenge
