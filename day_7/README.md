@@ -3,3 +3,7 @@
 ## Challenge 1
 
 - Picking a random words
+
+## Challenge 2
+
+- Replacing blanks with guesses
