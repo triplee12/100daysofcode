@@ -3,7 +3,7 @@
 """Calculate the paint area"""
 def paint_calc(height, width, cover):
     result = (height * width) / cover
-    print(f"You'll need {round(result)} of paint.")
+    print(f"You'll need {round(result)} cans of paint.")
 
 test_h = int(input("Height of wall: "))
 test_w = int(input("Width of wall: "))
