@@ -39,3 +39,13 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 ## [Day 7](https://github.com/triplee12/100daysofcode/tree/main/day_7)
 
 - Hangman challenge
+
+## [Day 8](https://github.com/triplee12/100daysofcode/tree/main/day_8)
+
+- Python function parameter
+- Python positional argument
+
+## [Day 9](https://github.com/triplee12/100daysofcode/tree/main/day_9)
+
+- Python dictionary
+- Nested list and dictionary
