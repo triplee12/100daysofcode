@@ -7,3 +7,7 @@
 ## Nesting List And Dictionary
 
 - Travel log
+
+## Final Project
+
+- Secret auction
