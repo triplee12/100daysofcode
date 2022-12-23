@@ -7,3 +7,4 @@
 ## Final Project
 
 - Calculator part 1
+- Calculator final touch
