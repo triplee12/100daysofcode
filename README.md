@@ -49,3 +49,8 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 
 - Python dictionary
 - Nested list and dictionary
+
+## [Day 10](https://github.com/triplee12/100daysofcode/tree/main/day_10)
+
+- Recursion
+- Docstring
