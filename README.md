@@ -61,3 +61,7 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 
 - Namespace (global scope and local scope)
 - Number guess game
+
+## [Day 13](https://github.com/triplee12/100daysofcode/tree/main/day_13)
+
+- Debugging
