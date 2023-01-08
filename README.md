@@ -54,3 +54,10 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 
 - Recursion
 - Docstring
+
+## [Day 11](https://github.com/triplee12/100daysofcode/tree/main/day_11)
+
+## [Day 12](https://github.com/triplee12/100daysofcode/tree/main/day_12)
+
+- Namespace (global scope and local scope)
+- Number guess game
