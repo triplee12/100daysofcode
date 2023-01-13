@@ -95,6 +95,20 @@ def check_resources(drinks, resources, request_, recipes):
                 break
 
 
+def process_coin(amount):
+    """Process user currency
+    
+    Args:
+        amount (str): amount of currency user inserted
+    
+    """
+    total = 0.0
+    coins = amount.split(" ")
+    for coin in range(0, len(coins)):
+        total += float(coins[coin])
+    return total
+
+
 turn = "on"
 while turn == "on":
     request_ = prompt(drinks)
@@ -102,4 +116,7 @@ while turn == "on":
 
     if request_ == "off":
         turn = "off" # Turn off the coffee machine
-    report(resources)
+    else:
+        amount = input("Enter a list of amount separated with space: ")
+        process_coin(amount)
+        report(resources)
