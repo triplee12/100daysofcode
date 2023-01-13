@@ -65,3 +65,11 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 ## [Day 13](https://github.com/triplee12/100daysofcode/tree/main/day_13)
 
 - Debugging
+
+## [Day 14](https://github.com/triplee12/100daysofcode/tree/main/day_1    4)
+
+- Higher Lower game project
+
+## [Day 15](https://github.com/triplee12/100daysofcode/tree/main/day_1    5)
+
+- Coffee Machine project
