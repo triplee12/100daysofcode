@@ -66,7 +66,10 @@ def report(obj):
         if resource == "Balance":
             print(f"{resource}: ${obj[resource]}")
             break
-        print(f"{resource}: {obj[resource]}")
+        elif resource == "Coffee":
+            print(f"{resource}: {obj[resource]}g")
+        else:
+            print(f"{resource}: {obj[resource]}ml")
 
 
 def check_resources(drinks, resources, request_, recipes):
@@ -156,8 +159,40 @@ def check_transaction(request_, total, drinks, resources):
         print("Sorry that's not enough money. Money refunded.")
         return False
 
+
+def make_coffee(request_, issuccess):
+    """Makes coffee and dispenses the drink user requested
+
+    Args:
+        request_ (str): user's request
+        issuccess (bool): contains True or False if transaction is
+        successful
+
+    """
+    if issuccess:
+        print(f"Here is your {request_}. Enjoy!")
+
+
+def prices(drinks):
+    """Prints the price for each drink
+
+    Args:
+        drinks (dict): dictionary of drinks and prices
+
+    """
+    for drink in drinks:
+        print(f"{drink}: ${drinks[drink]}")
+
+
 turn = "on"
 while turn == "on":
+    print("---------------- Resourcces --------------------\n")
+    report(resources)
+    print()
+    print("---------------- Drink Price -------------------\n")
+    prices(drinks)
+    print()
+
     request_ = prompt(drinks)
     check_resources(drinks, resources, request_, recipes)
 
@@ -166,5 +201,8 @@ while turn == "on":
     else:
         amount = input("Enter a list of amount separated with space: ")
         total = process_coin(amount)
-        check_transaction(request_, total, drinks, resources)
+        issuccess = check_transaction(request_, total, drinks, resources)
+        print()
+        make_coffee(request_, issuccess)
+        print("---------------- Resourcces --------------------\n")
         report(resources)
