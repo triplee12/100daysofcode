@@ -12,9 +12,9 @@ resources = {
 
 # Names of drinks and their prices
 drinks = {
-        "espresso":   4.25,
-        "latte":      5.01,
-        "cappuccino": 6.25,
+        "espresso":   1.25,
+        "latte":      2.01,
+        "cappuccino": 2.25,
 }
 
 # Recipe detail for coffee
@@ -109,6 +109,53 @@ def process_coin(amount):
     return total
 
 
+def check_transaction(request_, total, drinks, resources):
+    """Checks if customer has inserted enough money for drink
+    he/she requested
+
+    Args:
+        request_ (str): users request for a drink
+        total (flaot): total amount of money inserted
+        drinks (dict): contains drink prices
+        resources (dict): contains balance money in the machine
+
+    """
+    if request_ == "espresso" and total == drinks["espresso"]:
+        resources["Balance"] += total
+        return True
+    elif request_ == "espresso" and total > drinks["espresso"]:
+        customer_bal = total - drinks["espresso"]
+        resources["Balance"] += drinks["espresso"]
+        print(f"${round(customer_bal, 2)} balance has been refunded into your account")
+        return True
+    else:
+        print("Sorry that's not enough money. Money refunded.")
+        return False
+
+    if request_ == "latte" and total == drinks["latte"]:
+        resources["Balance"] += total
+        return True
+    elif request_ == "latte" and total > drinks["latte"]:
+        customer_bal = total - drinks["latte"]
+        resources["Balance"] += drinks["latte"]
+        print(f"${round(customer_bal, 2)} balance has been refunded into your account")
+        return True
+    else:
+        print("Sorry that's not enough money. Money refunded.")
+        return False
+
+    if request_ == "cappuccino" and total == drinks["cappuccino"]:
+        resources["Balance"] += total
+        return True
+    elif request_ == "cappuccino" and total > drinks["cappuccino"]:
+        customer_bal = total - drinks["cappuccino"]
+        resources["Balance"] += drinks["cappuccino"]
+        print(f"${round(customer_bal, 2)} balance has been refunded into your account")
+        return True
+    else:
+        print("Sorry that's not enough money. Money refunded.")
+        return False
+
 turn = "on"
 while turn == "on":
     request_ = prompt(drinks)
@@ -118,5 +165,6 @@ while turn == "on":
         turn = "off" # Turn off the coffee machine
     else:
         amount = input("Enter a list of amount separated with space: ")
-        process_coin(amount)
+        total = process_coin(amount)
+        check_transaction(request_, total, drinks, resources)
         report(resources)
