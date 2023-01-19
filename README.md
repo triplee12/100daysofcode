@@ -73,3 +73,8 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 ## [Day 15](https://github.com/triplee12/100daysofcode/tree/main/day_15)
 
 - Coffee Machine project
+
+## [Day 16](https://github.com/triplee12/100daysofcode/tree/main/day_16)
+
+- Object oriented programming (OOP)
+- Coffee machine
