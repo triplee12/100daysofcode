@@ -4,3 +4,4 @@
 
 - Draw a square challenge
 - Dashed line challenge
+- Drawing different shapes (triangle, square, pentagon, hexagon, heptagon, octagon, nonagon and decagon)
