@@ -9,12 +9,10 @@ spiro = Turtle()
 t.colormode(255)
 spiro.speed(0)
 
-for i in range(35):
+for i in range(int(360 / 5)):
     spiro.color(random_color())
-    spiro.forward(10)
-    spiro.rt(10)
     spiro.circle(45)
-    spiro.distance(0,45)
+    spiro.setheading(spiro.heading() + 5)
 
 screen = Screen()
 screen.exitonclick()
