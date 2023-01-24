@@ -7,3 +7,7 @@
 - Drawing different shapes (triangle, square, pentagon, hexagon, heptagon, octagon, nonagon and decagon)
 - Random walk challenge
 - Draw spirograph challenge
+
+### Project
+
+- Hirst painting
