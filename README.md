@@ -78,3 +78,13 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 
 - Object oriented programming (OOP)
 - Coffee machine
+
+## [Day 17](#https://github.com/triplee12/100daysofcode/tree/main/day_17)
+
+## [Day 18](https://github.com/triplee12/100daysofcode/tree/main/day_18)
+
+- Python turtle graphic
+
+## [Day 19](https://github.com/triplee12/100daysofcode/tree/main/day_19)
+
+- Python higher order functions and event listeners
