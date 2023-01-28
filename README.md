@@ -88,3 +88,7 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 ## [Day 19](https://github.com/triplee12/100daysofcode/tree/main/day_19)
 
 - Python higher order functions and event listeners
+
+## [Day 20](https://github.com/triplee12/100daysofcode/tree/main/day_20)
+
+- Snake game
