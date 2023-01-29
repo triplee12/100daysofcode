@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Snake game main module"""
-from turtle import Screen, Turtle
+from turtle import Screen
+from food import Food
 from snake import Snake
 import time
 
@@ -10,7 +11,7 @@ screen.bgcolor("#c3c3a2")
 screen.title("Anaconda")
 screen.tracer(0)
 game_level = [("easy", 10), ("hard", 5), ("harder", 0)]
-
+fd = Food()
 snake = Snake()
 screen.listen()
 screen.onkey(snake.up, "Up")
@@ -25,5 +26,8 @@ while is_on:
     screen.update()
     time.sleep(0.1)
     snake.move()
+
+    if snake.head.distance(fd) < 15:
+        fd.refresh()
 
 screen.exitonclick()
