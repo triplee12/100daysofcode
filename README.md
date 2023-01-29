@@ -92,3 +92,7 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 ## [Day 20](https://github.com/triplee12/100daysofcode/tree/main/day_20)
 
 - Snake game
+
+## [Day 21](https://github.com/triplee12/100daysofcode/tree/main/day_21)
+
+- Final version of snake game
