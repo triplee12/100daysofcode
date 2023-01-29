@@ -3,3 +3,4 @@
 - Detect food collision
 - Implementation of scoreboard
 - Implement check for collisions with wall
+- Implement check for collisions with snake's body

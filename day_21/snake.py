@@ -3,9 +3,9 @@
 from turtle import Turtle
 
 # Move position
-POSITIONS = [(-40, 0), (-20, 0), (0, 0)]
+POSITIONS = [(0, 0), (-20, 0), (-40, 0)]
 # Move distance
-MOVE_DIST = 20
+MOVE_DIST = 10
 UP = 90
 DOWN = 270
 LEFT = 180
@@ -22,12 +22,23 @@ class Snake:
     def create_snake(self):
         """Creates snake"""
 
-        for i in range(3):
-            snake = Turtle(shape="square")
-            snake.penup()
-            snake.goto(POSITIONS[i])
-            self.segments.append(snake)
-        return self.segments
+        for position in POSITIONS:
+            self.add_segments(position)
+
+    def add_segments(self, position):
+        """Add segment to the snake
+        Args:
+            position (int): position to add the segment
+
+        """
+        segment = Turtle(shape="square")
+        segment.penup()
+        segment.goto(position)
+        self.segments.append(segment)
+
+    def extends_(self):
+        """Extends the length of the snake after collision with food"""
+        self.add_segments(self.segments[-1].position())
 
     def up(self):
         """Moves the snake up"""
