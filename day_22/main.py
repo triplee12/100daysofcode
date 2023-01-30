@@ -31,5 +31,15 @@ while is_on:
         pong_ball.x_bounce()
     elif pong_ball.distance(left_paddle) < 50 and pong_ball.xcor() < -335:
         pong_ball.x_bounce()
+    else:
+        # Detect when the paddle misses the ball
+        if pong_ball.distance(right_paddle) > 50 and pong_ball.xcor() > 335:
+            screen.update()
+            pong_ball.goto(0, 0)
+            pong_ball.x_bounce()
+        elif pong_ball.distance(left_paddle) > 50 and pong_ball.xcor() < - 335:
+            screen.update()
+            pong_ball.goto(0, 0)
+            pong_ball.x_bounce()
 
 screen.exitonclick()
