@@ -20,6 +20,10 @@ class Ball(Turtle):
         ypos = self.ycor() + self.y_cor
         self.goto(xpos, ypos)
 
-    def bounce(self):
-        """Bounces the ball from one position to another"""
-        self.y_cor -= 9
+    def x_bounce(self):
+        """Bounces the ball from 'x' position to '-x' position"""
+        self.x_cor *= -1
+
+    def y_bounce(self):
+        """Bounces the ball from 'y' position to '-y' position"""
+        self.y_cor *= -1
