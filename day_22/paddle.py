@@ -2,23 +2,22 @@
 """Paddle module for pong game"""
 from turtle import Turtle
 
-X_POS = 350 # y position of the paddle on canvas
-Y_POS = 0 # x position of the paddle on canvas
-UP = 90
-DOWN = 270
 
 class Paddle(Turtle):
     """Paddles the pong ball. It moves up and down using onkey 
     press.
+    Args:
+        side (tuple): side of the paddle. Example (350, 0) for right
+        and (-350, 0) for left
     """
 
-    def __init__(self):
+    def __init__(self, side:(tuple)):
         super().__init__()
         self.penup()
         self.color("#fff")
         self.shapesize(stretch_wid = 5, stretch_len = 1)
         self.shape("square")
-        self.goto(X_POS, Y_POS)
+        self.side = self.goto((side))
 
     def go_up(self):
         """Moves the paddle up when press up arrow key"""
@@ -30,8 +29,17 @@ class Paddle(Turtle):
         paddle_y = self.ycor() - 20
         self.goto(self.xcor(), paddle_y)
 
-    def move(self):
-        """Moves the paddle up and down using onkey press"""
+    def right_side(self):
+        """Moves the paddle at the right, up and down using onkey 
+        press 'Up' arrow key and 'Down' arrow key
+        """
 
         self.screen.onkey(self.go_up, "Up")
         self.screen.onkey(self.go_down, "Down")
+
+    def left_side(self):
+        """Moves the paddle at the left up and down using 
+        onkey press 'w' and 's'
+        """
+        self.screen.onkey(self.go_up, "w")
+        self.screen.onkey(self.go_down, "s")
