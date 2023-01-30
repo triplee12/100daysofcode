@@ -22,5 +22,8 @@ while is_on:
     right_paddle.right_side()
     left_paddle.left_side()
     pong_ball.move()
+    # Detect collision of the ball with the wall
+    if pong_ball.ycor() > 280 or pong_ball.ycor() < -280:
+        pong_ball.bounce()
 
 screen.exitonclick()
