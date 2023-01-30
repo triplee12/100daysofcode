@@ -2,6 +2,7 @@
 """Main module of pong game"""
 from turtle import Screen
 from ball import Ball
+from scoreboard import ScoreBoard
 from paddle import Paddle
 import time
 
@@ -14,10 +15,11 @@ screen.listen()
 pong_ball = Ball()
 right_paddle = Paddle((350, 0))
 left_paddle = Paddle((-350, 0))
+score = ScoreBoard()
 is_on = True
 
 while is_on:
-    time.sleep(0.08)
+    time.sleep(pong_ball.move_fast)
     screen.update()
     right_paddle.right_side()
     left_paddle.left_side()
@@ -34,12 +36,18 @@ while is_on:
     else:
         # Detect when the paddle misses the ball
         if pong_ball.distance(right_paddle) > 50 and pong_ball.xcor() > 335:
+            pong_ball.reset_time()
             screen.update()
             pong_ball.goto(0, 0)
+            score.update_lscore()
             pong_ball.x_bounce()
         elif pong_ball.distance(left_paddle) > 50 and pong_ball.xcor() < - 335:
+            pong_ball.reset_time()
             screen.update()
             pong_ball.goto(0, 0)
+            score.update_rscore()
             pong_ball.x_bounce()
+
+        #is_on = False
 
 screen.exitonclick()

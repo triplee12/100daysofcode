@@ -11,6 +11,7 @@ class Ball(Turtle):
         self.penup()
         self.shape("circle")
         self.color("#fff")
+        self.move_fast = 0.1
         self.x_cor = 10
         self.y_cor = 10
 
@@ -23,7 +24,11 @@ class Ball(Turtle):
     def x_bounce(self):
         """Bounces the ball from 'x' position to '-x' position"""
         self.x_cor *= -1
+        self.move_fast *= 0.2
 
     def y_bounce(self):
         """Bounces the ball from 'y' position to '-y' position"""
         self.y_cor *= -1
+
+    def reset_time(self):
+        self.move_fast = 0.1
