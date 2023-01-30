@@ -96,3 +96,7 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 ## [Day 21](https://github.com/triplee12/100daysofcode/tree/main/day_21)
 
 - Final version of snake game
+
+## [Day 22](https://github.com/triplee12/100daysofcode/tree/main/day_22)
+
+- Build a pong game program
