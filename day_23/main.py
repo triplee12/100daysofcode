@@ -26,9 +26,16 @@ while is_on:
     car.move()
     car.create_cars()
 
+    #Detect when the turtle reach the positive y-axis
     if t_player.ycor() > 240:
         time.sleep(0.2)
         screen.update()
         score.update_score()
+
+    #Detect when the turtle collide with a car
+    for ca in car.cars:
+        if ca.distance(t_player) < 29:
+            score.game_over()
+            is_on = False
 
 screen.exitonclick()
