@@ -14,7 +14,7 @@ class CarsManager:
 
     def __init__(self):
         self.cars = []
-        #self.create_cars()
+        self.car_speed = 5
 
     def car_color(self):
         """Returns color randomly"""
@@ -40,5 +40,8 @@ class CarsManager:
     def move(self):
         """Moves the cars from positive x-axis to negative x-axis"""
         for car in self.cars:
-            distance = random.randint(3, 9)
-            car.backward(distance)
+            car.backward(self.car_speed)
+
+    def increase_speed(self):
+        """Increases the car speed by 5"""
+        self.car_speed += 5

@@ -28,9 +28,10 @@ while is_on:
 
     #Detect when the turtle reach the positive y-axis
     if t_player.ycor() > 240:
-        time.sleep(0.2)
         screen.update()
         score.update_score()
+        t_player.goto(0, -270)
+        car.increase_speed()
 
     #Detect when the turtle collide with a car
     for ca in car.cars:
