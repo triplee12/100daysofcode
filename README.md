@@ -104,3 +104,9 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 ## [Day 23](https://github.com/triplee12/100daysofcode/tree/main/day_23)
 
 - Build turtle crossing the road game
+
+## [Day 24](https://github.com/triplee12/100daysofcode/tree/main/day_24)
+
+- File read and write
+- File path
+- Mail merge program
