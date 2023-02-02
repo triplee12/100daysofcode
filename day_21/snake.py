@@ -40,6 +40,14 @@ class Snake:
         """Extends the length of the snake after collision with food"""
         self.add_segments(self.segments[-1].position())
 
+    def reset_segment(self):
+        """Clear all the snake segments"""
+        for segment in self.segments:
+            segment.goto(10000, 10000)
+        self.segments.clear()
+        self.create_snake()
+        self.head = self.segments[0]
+
     def up(self):
         """Moves the snake up"""
         if self.head.heading() != DOWN:

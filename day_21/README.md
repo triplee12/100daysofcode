@@ -4,3 +4,4 @@
 - Implementation of scoreboard
 - Implement check for collisions with wall
 - Implement check for collisions with snake's body
+- Save highest score to a file and read it whenever the game restarts
