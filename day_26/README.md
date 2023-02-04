@@ -7,3 +7,4 @@
 
 - Dictionary comprehension
     - Split string and convert it to dict
+    - Convert dictionary of temperature in celcius to fahrenheit
