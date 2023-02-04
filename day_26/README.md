@@ -4,3 +4,6 @@
     - Squaring numbers
     - Even numbers
     - Filter common numbers from two lists
+
+- Dictionary comprehension
+    - Split string and convert it to dict
