@@ -27,10 +27,7 @@ while len(guessed_state) < 50:
 
         if guess == "Exit":
             # Convert the states not guessed by the user to csv
-            not_guess = []
-            for state in all_states:
-                if state not in guessed_state:
-                    not_guess.append(state)
+            not_guess = [state for state in all_states if state not in guessed_state]
             df = pd.DataFrame(not_guess)
             df.to_csv("not_guess_states.csv")
             break
