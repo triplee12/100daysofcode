@@ -119,3 +119,7 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 
 - List comprehension
 - Dictionary comprehension
+
+## [Day 27](https://github.com/triplee12/100daysofcode/tree/main/day_27)
+
+- Tkinter GUI
