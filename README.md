@@ -123,3 +123,7 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 ## [Day 27](https://github.com/triplee12/100daysofcode/tree/main/day_27)
 
 - Tkinter GUI
+
+## [Day 27](https://github.com/triplee12/100daysofcode/tree/main/day_28)
+
+- Build work timer using Tkinter python gui library
