@@ -17,6 +17,7 @@ timer = None
 # ---------------------------- TIMER RESET ------------------------------- # 
 
 def reset_counter():
+    """Resets the counter"""
     global reps
     window.after_cancel(timer)
     reps = 0
@@ -27,6 +28,7 @@ def reset_counter():
 # ---------------------------- TIMER MECHANISM ------------------------------- # 
 
 def start_counter():
+    """Starts the counter"""
     global reps
     reps += 1
     work_sec = WORK_MIN * 60
@@ -47,6 +49,7 @@ def start_counter():
 
 
 def counter(count):
+    """Counts down to a specific time"""
     global timer
     count_min = math.floor(count / 60)
     count_sec = count % 60
