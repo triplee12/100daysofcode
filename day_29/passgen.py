@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Password generator gui"""
 from tkinter import *
+from tkinter import messagebox
 
 def save():
     """Saves user password to a file"""
@@ -8,12 +9,16 @@ def save():
     get_email = email_entry.get()
     get_pass = pass_entry.get()
     value = f"website:  {get_web}, email/username: {get_email}, password: {get_pass}"
-
-    webentry.delete(0, END)
-    email_entry.delete(0, END)
-    pass_entry.delete(0, END)
-    with open("my_pass.txt", mode="a", encoding="utf-8") as pas:
-        pas.write(f"{value}\n")
+    if get_web == "" or get_email == "" or get_pass == "":
+        messagebox.showerror(title="Oops!", message="Please make sure you haven't left any fields empty.")
+    else:
+        msbox = messagebox.askokcancel(title="Do you want to save?", message=value)
+        if msbox:
+            webentry.delete(0, END)
+            email_entry.delete(0, END)
+            pass_entry.delete(0, END)
+            with open("my_pass.txt", mode="a", encoding="utf-8") as pas:
+                pas.write(f"{value}\n")
 
 # Window settings
 window = Tk()
