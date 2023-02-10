@@ -2,6 +2,30 @@
 """Password generator gui"""
 from tkinter import *
 from tkinter import messagebox
+import random
+import pyperclip
+
+
+def generate():
+    """Generates password for user"""
+    letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 
+                'M','N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 
+                'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 
+                'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 
+                'w', 'x', 'y', 'z']
+    numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    symbols = ['"', '/', '>', '.', '<', '[', '{', ']', '}', '?', ';', ':', 
+                "'", '|', ')', '(', '_', '-', '*', '&', '^', '%', '$', 
+                '#', '@', '!', '~']
+
+    ch_pass = [random.choice(letters) for _ in range(6)]
+    num_pass = [random.choice(numbers) for _ in range(6)]
+    sym_pass = [random.choice(symbols) for _ in range(6)]
+
+    passwords = ch_pass + num_pass + sym_pass
+    random.shuffle(passwords)
+    pass_entry.insert(0, ''.join(passwords))
+    pyperclip.copy(passwords)
 
 def save():
     """Saves user password to a file"""
@@ -47,7 +71,7 @@ password = Label(text="Password:", fg="#000", bg="#fff", font=("Arial", 12, "nor
 password.grid(column=0, row=3)
 pass_entry = Entry(width=21)
 pass_entry.grid(column=1, row=3)
-pass_btn = Button(text="Generate Password", fg="#000", bg="#fff", highlightthickness=0)
+pass_btn = Button(text="Generate Password", fg="#000", bg="#fff", highlightthickness=0, command=generate)
 pass_btn.grid(column=2, row=3)
 
 # Button for add password
