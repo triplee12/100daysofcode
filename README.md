@@ -131,3 +131,7 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 ## [Day 29](https://github.com/triplee12/100daysofcode/tree/main/day_29)
 
 - Password generator gui
+
+## [Day 30](https://github.com/triplee12/100daysofcode/tree/main/day_30)
+
+- Error handling, exceptions
