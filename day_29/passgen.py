@@ -2,21 +2,24 @@
 """Password generator gui"""
 from tkinter import *
 from tkinter import messagebox
+import json
 import random
 import pyperclip
 
 
 def generate():
     """Generates password for user"""
-    letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 
-                'M','N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 
-                'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 
-                'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 
-                'w', 'x', 'y', 'z']
+    letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 
+    		'L', 'M','N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 
+    		'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 
+    		'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 
+    		's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    		
     numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-    symbols = ['"', '/', '>', '.', '<', '[', '{', ']', '}', '?', ';', ':', 
-                "'", '|', ')', '(', '_', '-', '*', '&', '^', '%', '$', 
-                '#', '@', '!', '~']
+    
+    symbols = ['"', '/', '>', '.', '<', '[', '{', ']', '}', '?', ';', 
+    		':', "'", '|', ')', '(', '_', '-', '*', '&', '^', '%', 
+    		'$', '#', '@', '!', '~']
 
     ch_pass = [random.choice(letters) for _ in range(6)]
     num_pass = [random.choice(numbers) for _ in range(6)]
@@ -32,17 +35,34 @@ def save():
     get_web = webentry.get()
     get_email = email_entry.get()
     get_pass = pass_entry.get()
-    value = f"website:  {get_web}, email/username: {get_email}, password: {get_pass}"
+    new_data = {get_web:  {
+        "email": get_email,
+        "password": get_pass
+        }
+    }
     if get_web == "" or get_email == "" or get_pass == "":
         messagebox.showerror(title="Oops!", message="Please make sure you haven't left any fields empty.")
     else:
-        msbox = messagebox.askokcancel(title="Do you want to save?", message=value)
+        msbox = messagebox.askokcancel(title="Do you want to save?", message=f"website: {get_web} | email: {get_email} | password: {get_pass}")
         if msbox:
             webentry.delete(0, END)
             email_entry.delete(0, END)
             pass_entry.delete(0, END)
-            with open("my_pass.txt", mode="a", encoding="utf-8") as pas:
-                pas.write(f"{value}\n")
+
+            try:
+                # read file
+                with open("my_pass.json", mode="r", encoding="utf-8") as val:
+                    data = json.load(val)
+                    # update existing file
+                    data.update(new_data)
+            except FileNotFoundError:
+                # write to file
+                with open("my_pass.json", mode="w", encoding="utf-8") as pas:
+                    json.dump(data, pas, indent=4)
+            else:
+                # write to file
+                with open("my_pass.json", mode="w", encoding="utf-8") as pas:
+                    json.dump(data, pas, indent=4)
 
 # Window settings
 window = Tk()
