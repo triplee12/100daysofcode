@@ -53,16 +53,29 @@ def save():
                 # read file
                 with open("my_pass.json", mode="r", encoding="utf-8") as val:
                     data = json.load(val)
-                    # update existing file
-                    data.update(new_data)
             except FileNotFoundError:
                 # write to file
                 with open("my_pass.json", mode="w", encoding="utf-8") as pas:
-                    json.dump(data, pas, indent=4)
+                    json.dump(new_data, pas, indent=4)
             else:
                 # write to file
                 with open("my_pass.json", mode="w", encoding="utf-8") as pas:
+                    # update existing file
+                    data.update(new_data)
                     json.dump(data, pas, indent=4)
+def search_pass():
+    """Search for password in the save file"""
+    try:
+        with open("my_pass.json", mode="r", encoding="utf-8") as get_pass:
+            data = json.load(get_pass)
+    except FileNotFoundError:
+        messagebox.showerror(title="Error", message="File not found!")
+    else:
+        for key in data.keys():
+            if key == webentry.get():
+                email = data[key]["email"]
+                passw = data[key]["password"]
+                messagebox.showinfo(title=key, message=f"Email: {email}, Password: {passw}")
 
 # Window settings
 window = Tk()
@@ -76,14 +89,14 @@ canvas.grid(column=1, row=0)
 # Label, entry for website
 website = Label(text="Website:", fg="#000", bg="#fff", font=("Arial", 12, "normal"))
 website.grid(column=0, row=1)
-webentry = Entry(width=35)
-webentry.grid(column=1, row=1, columnspan=2)
+webentry = Entry(width=21)
+webentry.grid(column=1, row=1)
 webentry.focus()
 
 # Label, entry for email or username
 email_or_username = Label(text="Email/Username:", fg="#000", bg="#fff", font=("Arial", 12, "normal"))
 email_or_username.grid(column=0, row=2)
-email_entry = Entry(width=35)
+email_entry = Entry(width=38)
 email_entry.grid(column=1, row=2, columnspan=2)
 
 # Label, entry for password
@@ -91,11 +104,15 @@ password = Label(text="Password:", fg="#000", bg="#fff", font=("Arial", 12, "nor
 password.grid(column=0, row=3)
 pass_entry = Entry(width=21)
 pass_entry.grid(column=1, row=3)
-pass_btn = Button(text="Generate Password", fg="#000", bg="#fff", highlightthickness=0, command=generate)
+pass_btn = Button(text="Generate Password", width=14, fg="#000", bg="#fff", highlightthickness=0, command=generate)
 pass_btn.grid(column=2, row=3)
 
 # Button for add password
 add = Button(text="Add", width=36, fg="#000", bg="green", highlightthickness=0, command=save)
 add.grid(column=1, row=4, columnspan=2)
+
+# Button for search
+search_btn = Button(text="Search", width=10, fg="#000", bg="#fff", highlightthickness=0, command=search_pass)
+search_btn.grid(column=2, row=1)
 
 window.mainloop()
