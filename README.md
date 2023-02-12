@@ -135,3 +135,7 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 ## [Day 30](https://github.com/triplee12/100daysofcode/tree/main/day_30)
 
 - Error handling, exceptions
+
+## [Day 31](https://github.com/triplee12/100daysofcode/tree/main/day_31)
+
+- Flip card gui
