@@ -8,8 +8,6 @@ with open("quotes.txt", mode="r", encoding="utf-8") as data:
     data_list = data.readlines()
 
 date_time = datetime.datetime.now()
-year = date_time.year
-month = date_time.month
 weekday = date_time.weekday()
 
 reciever = "reciever@example.com"

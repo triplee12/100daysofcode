@@ -26,12 +26,11 @@ birth_dct = data.to_dict(orient="records")
 
 # 2. Check if today matches a birthday in the birthdays.csv
 date = datetime.datetime.now()
-year = date.year
 month = date.month
 day = date.day
 
 for i in range(len(birth_dct)):
-    if year == int(birth_dct[i]["year"]) and month == int(birth_dct[i]["month"]) and day == int(birth_dct[i]["day"]):
+    if month == int(birth_dct[i]["month"]) and day == int(birth_dct[i]["day"]):
 
         # 3. If step 2 is true, pick a random letter from letter templates and replace the [NAME] with the person's actual name from birthdays.csv
         templates = ["letter_1.txt", "letter_2.txt", "letter_3.txt"]
