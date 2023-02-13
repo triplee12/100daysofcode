@@ -139,3 +139,8 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 ## [Day 31](https://github.com/triplee12/100daysofcode/tree/main/day_31)
 
 - Flip card gui
+
+## [Day 32](https://github.com/triplee12/100daysofcode/tree/main/day_32)
+
+- Positive monday quote automated mail
+- Birthday wish automated mail
