@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Birthday email sender"""
+"""Monday quote email sender"""
 import smtplib
 import datetime
 import random
