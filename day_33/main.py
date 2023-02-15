@@ -56,4 +56,4 @@ while True:
             send_mail.starttls()
             send_mail.login("me@gmail.com", "hello")
             message = "Look up"
-            send_mail.sendmail(to_addr="me@gmail.com", to_addrs="tripleeoliver@gmail.com", msg=f"subject:Iss Location\n\n{message}")
+            send_mail.sendmail(to_addr="me@gmail.com", to_addrs="me@gmail.com", msg=f"subject:Iss Location\n\n{message}")
