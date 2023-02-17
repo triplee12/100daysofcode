@@ -148,3 +148,7 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 ## [Day 33](https://github.com/triplee12/100daysofcode/tree/main/day_33)
 
 - Application programming interface (API)
+
+## [Day 34](https://github.com/triplee12/100daysofcode/tree/main/day_34)
+
+- Travial quiz gui application

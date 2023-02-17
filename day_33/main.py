@@ -50,7 +50,8 @@ def is_night():
 while True:
     i = 0
     time.sleep(60)
-    print(i + 1)
+    i += 1
+    print(i)
     if is_iss() and is_night():
         with smtplib.SMTP("smtp.gmail.com") as send_mail:
             send_mail.starttls()
