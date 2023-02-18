@@ -152,3 +152,7 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 ## [Day 34](https://github.com/triplee12/100daysofcode/tree/main/day_34)
 
 - Travial quiz gui application
+
+## [Day 35](https://github.com/triplee12/100daysofcode/tree/main/day_35)
+
+- Weather application sms notification
