@@ -156,3 +156,7 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 ## [Day 35](https://github.com/triplee12/100daysofcode/tree/main/day_35)
 
 - Weather application sms notification
+
+## [Day 36](https://github.com/triplee12/100daysofcode/tree/main/day_36)
+
+- Stock price tracking
