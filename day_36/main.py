@@ -47,7 +47,7 @@ day_before_close = float(day_before[1]['4. close'])
 
 # Check for positive difference between yesterday and the day before yesterday stock
 positive_diff = abs(yesterday_close - day_before_close)
-percent = positive_diff / 100
+percent = (positive_diff / yesterday_close) * 100
 
 if percent > 5:
     # Get latest news of the stock
