@@ -52,9 +52,8 @@ percent = (positive_diff / yesterday_close) * 100
 if percent > 5:
     # Get latest news of the stock
     get_news = requests.get(NEWS_ENDPOINT, headers=headers, params=news_params)
-    news_data = get_news.json()
-    news_list = [(k, v) for k, v in news_data.items()]
-    news = news_list[1:3][1][1][:4]
+    news_data = get_news.json()['articles']
+    news = news_data[:4]
 
     # Send notification
     account_sid = os.environ["TWILIO_ACCOUNT_SID"]
