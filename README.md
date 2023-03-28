@@ -160,3 +160,7 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 ## [Day 36](https://github.com/triplee12/100daysofcode/tree/main/day_36)
 
 - Stock price tracking
+
+## [Day 37](https://github.com/triplee12/100daysofcode/tree/main/day_37)
+
+- Habit tracking
