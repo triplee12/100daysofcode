@@ -164,3 +164,7 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 ## [Day 37](https://github.com/triplee12/100daysofcode/tree/main/day_37)
 
 - Habit tracking
+
+## [Day 38](https://github.com/triplee12/100daysofcode/tree/main/day_38)
+
+- Workout tracking
