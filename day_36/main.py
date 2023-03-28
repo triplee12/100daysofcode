@@ -46,9 +46,10 @@ yesterday_close = float(stock[0]['4. close'])
 day_before_close = float(day_before[1]['4. close'])
 
 # Check for positive difference between yesterday and the day before yesterday stock
-positive_diff = round(yesterday_close - day_before_close, 2)
+positive_diff = abs(yesterday_close - day_before_close)
+percent = positive_diff / 100
 
-if int(positive_diff) > 5:
+if percent > 5:
     # Get latest news of the stock
     get_news = requests.get(NEWS_ENDPOINT, headers=headers, params=news_params)
     news_data = get_news.json()
@@ -61,7 +62,7 @@ if int(positive_diff) > 5:
     client = Client(account_sid, auth_token)
     for new in news:
         message = client.messages.create(
-                body=f"{STOCK_NAME}: 🔺{positive_diff}%\n{new['title']}\n{new['content']}",
+                body=f"{STOCK_NAME}: 🔺{percent}%\n{new['title']}\n{new['content']}",
             from_="+18000000000",
             to="+200000000000"
         )
