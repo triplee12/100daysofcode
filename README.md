@@ -81,7 +81,7 @@ Please feel free to leave a review or comment on any of the code file|block|line
 - Object oriented programming (OOP)
 - Coffee machine
 
-## [Day 17](#https://github.com/triplee12/100daysofcode/tree/main/day_17)
+## [Day 17](#<https://github.com/triplee12/100daysofcode/tree/main/day_17)>
 
 ## [Day 18](https://github.com/triplee12/100daysofcode/tree/main/day_18)
 
@@ -178,3 +178,7 @@ Please feel free to leave a review or comment on any of the code file|block|line
 ## [Day 40](https://github.com/triplee12/100daysofcode/tree/main/day_40)
 
 - Flight deal finder part 2
+
+## [Day 41](https://github.com/triplee12/100daysofcode/tree/main/day_41)
+
+- Personal Website app
