@@ -11,11 +11,16 @@
 <body>
     <h1>Contact Me</h1>
     <div>
-        <p>Phone number: +2348153836251</p>
-        <form action="." method="post">
+        <p>Phone number: <a href="tel:+2348153836251">+2348153836251</a></p>
+        <p>Email Address: <a href="mailto:me@example.com">me@example.com</a></p>
+        <p>Office Address: Oops, here's my office address</p>
+        <hr size="2" noshade>
+        <form action="mailto:me@example.com" method="post">
+            <label for="full_name">Full Name:</label>
             <input type="text" name="full_name" id="full_name" placeholder="Full Name">
             <br>
             <br>
+            <label for="mail">Your Email</label>
             <input type="email" name="mail" id="mail" placeholder="Enter Email">
             <br>
             <br>
