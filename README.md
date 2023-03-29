@@ -1,7 +1,9 @@
 # 100 Days Of Code
 
 This challenge is/was drafted from Angela Yu's python course.
-I and my study team agreed to work on the 100 days of code to enable us enhance and master python programming language. Please feel free to leave a review or comment on any of the code file|block|line.
+I and my study team agreed to work on the 100 days of code to enable us enhance
+and master python programming language.
+Please feel free to leave a review or comment on any of the code file|block|line.
 
 ## [Day 1](https://github.com/triplee12/100daysofcode/tree/main/day_1)
 
@@ -168,3 +170,11 @@ I and my study team agreed to work on the 100 days of code to enable us enhance 
 ## [Day 38](https://github.com/triplee12/100daysofcode/tree/main/day_38)
 
 - Workout tracking
+
+## [Day 39](https://github.com/triplee12/100daysofcode/tree/main/day_39)
+
+- Flight deal finder part 1
+
+## [Day 40](https://github.com/triplee12/100daysofcode/tree/main/day_40)
+
+- Flight deal finder part 2
