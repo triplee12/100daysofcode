@@ -182,3 +182,7 @@ Please feel free to leave a review or comment on any of the code file|block|line
 ## [Day 41](https://github.com/triplee12/100daysofcode/tree/main/day_41)
 
 - Personal Website app
+
+## [Day 42](https://github.com/triplee12/100daysofcode/tree/main/day_42)
+
+- Personal Website app - intermediate html
